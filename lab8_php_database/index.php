@@ -1,7 +1,7 @@
 <?php
 include("koneksi.php");
 // query untuk menampilkan data
-$sql = 'SELECT * FROM data_barang';
+$sql = 'SELECT * FROM  data_barang';
 $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
