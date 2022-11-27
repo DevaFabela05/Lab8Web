@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     header('location: index.php.php');
 }
 $id = $_GET['id'];
-$sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
+$sql = "SELECT * FROM data_barang WHERE id_barang = '($id)'";
 $result = mysqli_query($conn, $sql);
 if (!$result) die('Error: Data tidak tersedia');
 $data = mysqli_fetch_array($result);
