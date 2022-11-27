@@ -9,14 +9,14 @@
 Dengan mengaktifkan xampp terlebih dahulu untuk menyalakan aphace dan mysql, lalu kemudian membuat folder baru dengan nama lab8_php_database pada root directory web server (c:\xampp\htdocs). dan bisa di cek melalui http://localhost/lab8_php_database/ pada google chrome maupun mozila. Beginilah tampilannya:
 ![gambar1](screenshot/ss1.png)
 
-#### Membuat Database
+#### Membuat Database dan Tabel
 
-membuat Database pada Mysql dengan nama latihan1 dan membuat tabel data_barang. kemudian menambahkan data pada tabel data_barang Inilah tampilannya:
+membuat Database pada Mysql dengan nama latihan1 dan membuat tabel data_barang. Inilah tampilannya:
 ![gambar2](screenshot/ss2.png)
 
-#### Membuat tabel dan menambahkan data
+#### Menambahkan data
 
-membuat Database pada Mysql dengan nama latihan1 dan membuat tabel data_barang. kemudian menambahkan data pada tabel data_barang Inilah tampilannya:
+Saya mencoba menambahkan data dengan menggunakan command prompt. Inilah tampilannya:
 ![gambar2](screenshot/ss3.png)
 
 #### Membuat Program CRUD
