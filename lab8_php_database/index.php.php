@@ -43,7 +43,7 @@ $result = mysqli_query($conn, $sql);
                             <td>
                                 <a href="ubah.php?id=<?= $row['id_barang']; ?>">ubah</a> |
                                 <a href="hapus.php?id=<?= $row['id_barang']; ?>" onclick="
-                                    return confirm('yakin');">hapus</a>
+                                    return confirm('apakah anda yakin ingin menghapus?');">hapus</a>
                             </td>
                         </tr>
                     <?php endwhile;

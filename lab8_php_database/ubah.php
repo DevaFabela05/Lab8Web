@@ -1,6 +1,7 @@
 <?php
 error_reporting(E_ALL);
 include_once 'koneksi.php';
+
 if (isset($_POST['submit'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
@@ -28,7 +29,7 @@ if (isset($_POST['submit'])) {
     header('location: index.php.php');
 }
 $id = $_GET['id'];
-$sql = "SELECT * FROM data_barang WHERE id_barang = '($id)'";
+$sql = "SELECT * FROM data_barang WHERE id_barang = '{$id}'";
 $result = mysqli_query($conn, $sql);
 if (!$result) die('Error: Data tidak tersedia');
 $data = mysqli_fetch_array($result);
@@ -54,7 +55,8 @@ function is_select($var, $val)
             <form method="post" action="ubah.php" enctype="multipart/form-data">
                 <div class="input">
                     <label>Nama Barang</label>
-                    <input type="text" name="nama" value="<?php echo $data['nama']; ?>" />
+                    <input type="text" name="nama" value="<?php echo
+                                                            $data['nama']; ?>" />
                 </div>
                 <div class="input">
                     <label>Kategori</label>
@@ -66,22 +68,26 @@ function is_select($var, $val)
                 </div>
                 <div class="input">
                     <label>Harga Jual</label>
-                    <input type="text" name="harga_jual" value="<?php echo $data['harga_jual']; ?>" />
+                    <input type="text" name="harga_jual" value="<?php echo
+                                                                $data['harga_jual']; ?>" />
                 </div>
                 <div class="input">
                     <label>Harga Beli</label>
-                    <input type="text" name="harga_beli" value="<?php echo $data['harga_beli']; ?>" />
+                    <input type="text" name="harga_beli" value="<?php echo
+                                                                $data['harga_beli']; ?>" />
                 </div>
                 <div class="input">
                     <label>Stok</label>
-                    <input type="text" name="stok" value="<?php echo $data['stok']; ?>" />
+                    <input type="text" name="stok" value="<?php echo
+                                                            $data['stok']; ?>" />
                 </div>
                 <div class="input">
                     <label>File Gambar</label>
                     <input type="file" name="file_gambar" />
                 </div>
                 <div class="submit">
-                    <input type="hidden" name="id" value="<?php echo $data['id_barang']; ?>" />
+                    <input type="hidden" name="id" value="<?php echo
+                                                            $data['id_barang']; ?>" />
                     <input type="submit" name="submit" value="Simpan" />
                 </div>
             </form>
